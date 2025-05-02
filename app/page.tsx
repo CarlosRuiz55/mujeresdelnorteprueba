@@ -98,55 +98,58 @@ export default function Home() {
       <main className="flex-1">
         {/* Hero Section */}
         <section id="inicio" className="relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-[#8B4513]/90 via-[#8B4513]/70 to-[#8B4513]/90 mix-blend-multiply"></div>
+          {/* Fondo gradiente más suave solo detrás del texto */}
+          <div className="absolute inset-0">
+            <div className="absolute inset-0 bg-black/30"></div>
+          </div>
+
           <div className="relative h-screen max-h-[800px] overflow-hidden">
             <Image
-              src="/mujeresconcafe.webp?height=1080&width=1920&text=Mujeres+Productoras"
+              src="/mujeresconcafe.webp"
               alt="Mujeres del Norte - Cooperativa de mujeres productoras"
               fill
               className="object-cover object-center"
               priority
             />
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">
-              <div className="relative mb-6 inline-block">
-                <span className="absolute -inset-1 rounded-full bg-white/20 blur-xl"></span>
-                <div className="relative rounded-full border border-white/30 bg-white/10 px-6 py-1 text-sm backdrop-blur-sm">
-                  Empoderamiento femenino en el sector agroindustrial
-                </div>
+
+            <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center text-white">
+              {/* Badge con efecto de pulso */}
+              <div className="mb-5 animate-pulse rounded-full border border-white/30 bg-white/10 px-6 py-1 text-sm backdrop-blur-sm shadow-lg">
+                Empoderamiento femenino en el sector agroindustrial
               </div>
-              <h1 className="mb-4 font-serif text-5xl font-bold tracking-tight md:text-7xl lg:text-8xl">
-                <span className="block">Mujeres</span>
-                <span className="block mt-2 text-[#6aa84f]">del Norte</span>
+
+              {/* Título impactante */}
+              <h1 className="text-5xl md:text-7xl font-bold font-serif leading-tight text-white drop-shadow-[2px_2px_4px_rgba(0,0,0,0.7)]">
+                Mujeres
+                <span className="block mt-2 text-[#f4a10b]">del Norte</span>
               </h1>
-              <p className="mx-auto mb-8 max-w-2xl text-lg font-light leading-relaxed md:text-xl lg:text-2xl">
-                Cooperativa multisectorial de mujeres productoras de café oro exportable, miel de abeja y flor de
-                Jamaica con calidad certificada
+              {/* Subtítulo más fuerte */}
+              <p className="mt-4 text-xl text-white drop-shadow-[1px_1px_3px_rgba(0,0,0,0.7)] max-w-xl">
+                Cooperativa de mujeres productoras de café oro, miel de abeja y flor de Jamaica con calidad certificada.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button
-                  asChild
-                  size="lg"
-                  className="group relative overflow-hidden rounded-full bg-amber-500 px-8 text-white shadow-lg transition-all hover:bg-amber-600 hover:shadow-amber-500/30"
+
+              {/* Botones visibles */}
+              <div className="mt-8 flex flex-col sm:flex-row gap-4">
+                <Link
+                  href="#productos"
+                  className="rounded-full bg-[#c41e3a] px-6 py-3 text-white font-semibold shadow-lg hover:scale-105 transition-transform" // <-- Color actualizado aquí
                 >
-                  <Link href="#productos" className="flex items-center gap-2">
-                    Nuestros Productos
-                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                  </Link>
-                </Button>
-                <Button
-                  asChild
-                  size="lg"
-                  variant="outline"
-                  className="rounded-full border-white/30 bg-white/10 px-8 text-white backdrop-blur-sm transition-all hover:bg-white/20"
+                  Nuestros Productos →
+                </Link>
+                <Link
+                  href="#contacto"
+                  className="rounded-full border border-white/40 bg-white/10 px-6 py-3 text-white font-semibold backdrop-blur-sm hover:bg-white/20 transition"
                 >
-                  <Link href="#contacto">Contacto</Link>
-                </Button>
+                  Contacto
+                </Link>
               </div>
             </div>
-            <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+
+            {/* Scroll hacia abajo */}
+            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 animate-bounce">
               <Link
                 href="#nosotras"
-                className="flex h-12 w-12 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm transition-colors hover:bg-white/20"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 transition"
               >
                 <ChevronDown className="h-6 w-6 text-white" />
               </Link>
@@ -197,56 +200,153 @@ export default function Home() {
               <div className="flex flex-col justify-center space-y-8">
                 <div>
                   <h3 className="mb-4 text-2xl font-bold text-primary">Nuestra Misión</h3>
-                  <p className="text-lg leading-relaxed text-gray-700">
-                    Fortalecer la autonomía económica y social de mujeres feministas rurales mediante la producción y
-                    exportación de café oro SHG, miel de abeja y jamaica de alta calidad, bajo un modelo de comercio
-                    justo y sostenible. A través de nuestro trabajo, generamos oportunidades económicas equitativas que
-                    empoderan a nuestras socias y transforman sus comunidades, promoviendo la justicia social y la
-                    protección del medio ambiente.
+                  <p className="text-lg leading-relaxed text-gray-700 text-justify">
+                    Somos una cooperativa de base multisectorial de mujeres, brindando servicios para el desarrollo social,
+                    comprometida con el enfoque agroecológico lideradas por mujeres, y sustentada en la economía con la producción
+                    agroecológica. La diversificación de rubros para la generación de ingresos económicos, con empoderamiento ideológico
+                    organizativo, con estrategias que vincule la comercialización de nuestras producciones a nivel nacional e internacional.
+
                   </p>
                 </div>
 
                 <div>
                   <h3 className="mb-4 text-2xl font-bold text-primary">Nuestra Historia</h3>
-                  <p className="mb-4 text-lg leading-relaxed text-gray-700">
-                    Mujeres del Norte nació del sueño colectivo de mujeres rurales que buscaban independencia económica
-                    y reconocimiento de su labor en el campo.
+                  <p className="mb-4 text-lg leading-relaxed text-gray-700 text-justify">
+                    La Cooperativa Multisectorial Mujeres del Norte R.L. (COPEMUJER R.L.), ubicada en la comunidad Los Llanos
+                    No. 1, municipio de Pueblo Nuevo, Estelí, fue constituida el 18 de noviembre de 2004 por 36 mujeres socias
+                    de la misma comunidad.
                   </p>
-                  <p className="text-lg leading-relaxed text-gray-700">
-                    Nuestro compromiso con la producción sostenible y la mejora de la calidad de vida de nuestras
-                    productoras nos ha permitido crecer y desarrollarnos como una organización líder en el sector
-                    agroindustrial.
+                  <p className="text-lg leading-relaxed text-gray-700 text-justify">
+                    Desde sus inicios, ha trabajado bajo principios de gobernanza participativa,
+                    organizándose mediante un consejo de administración, una junta de vigilancia, una comisión de
+                    educación cooperativa, y representación ante la central Las Diosas R.L. Su enfoque ha sido el
+                    empoderamiento económico, social y productivo de las mujeres rurales
                   </p>
                 </div>
 
                 <div>
-                  <h3 className="mb-4 text-2xl font-bold text-primary">Nuestros Valores</h3>
-                  <div className="grid grid-cols-2 gap-4">
-                    {["Empoderamiento femenino", "Equidad", "Comercio justo", "Calidad y compromiso", "Respeto"].map(
-                      (value, index) => (
-                        <div
-                          key={index}
-                          className="flex items-center gap-3 rounded-lg border border-primary/20 bg-primary/5 p-3 transition-colors hover:bg-primary/10"
-                        >
-                          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary/20 text-primary">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="16"
-                              height="16"
-                              viewBox="0 0 24 24"
-                              fill="none"
-                              stroke="currentColor"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            >
-                              <polyline points="20 6 9 17 4 12" />
-                            </svg>
-                          </div>
-                          <span className="font-medium">{value}</span>
+                  <h3 className="mb-8 text-4xl font-extrabold text-center text-primary">
+                    Nuestros Valores
+                  </h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                    {[
+                      {
+                        label: "Empoderamiento femenino",
+                        icon: (
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-10 w-10 text-white"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14v7m-4-4h8m-4-7a4 4 0 100-8 4 4 0 000 8z" />
+                          </svg>
+                        ),
+                        color: "bg-pink-500",
+                      },
+                      {
+                        label: "Solidaridad",
+                        icon: (
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-10 w-10 text-white"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.333 0-2.667 1.333-4 4 1.333 2.667 2.667 4 4 4s2.667-1.333 4-4c-1.333-2.667-2.667-4-4-4z" />
+                          </svg>
+                        ),
+                        color: "bg-emerald-500",
+                      },
+                      {
+                        label: "Autonomía",
+                        icon: (
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-10 w-10 text-white"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          </svg>
+                        ),
+                        color: "bg-indigo-500",
+                      },
+                      {
+                        label: "Educación",
+                        icon: (
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-10 w-10 text-white"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l6.16-3.422A12.083 12.083 0 0112 21.5a12.083 12.083 0 01-6.16-10.922L12 14z" />
+                          </svg>
+                        ),
+                        color: "bg-blue-500",
+                      },
+                      {
+                        label: "Cooperación",
+                        icon: (
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-10 w-10 text-white"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 8h10M7 12h4m1 8a9 9 0 110-18 9 9 0 010 18z" />
+                          </svg>
+                        ),
+                        color: "bg-yellow-500",
+                      },
+                      {
+                        label: "Respeto",
+                        icon: (
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-10 w-10 text-white"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 11c0-1.105.895-2 2-2h6a2 2 0 012 2v4a2 2 0 01-2 2h-6a2 2 0 01-2-2v-4z M2 12h4v-4v8" />
+                          </svg>
+                        ),
+                        color: "bg-red-500",
+                      },
+                      {
+                        label: "Igualdad",
+                        icon: (
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-10 w-10 text-white"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 17H8m8-4H8m8-4H8" />
+                          </svg>
+                        ),
+                        color: "bg-purple-500",
+                      },
+                    ].map(({ label, icon, color }, index) => (
+                      <div
+                        key={index}
+                        className="flex flex-col items-center justify-center rounded-2xl border border-primary/10 bg-white p-6 shadow-lg transition-transform hover:scale-105 hover:shadow-xl text-center"
+                      >
+                        <div className={`mb-4 flex h-14 w-14 items-center justify-center rounded-full ${color} shadow-md`}>
+                          {icon}
                         </div>
-                      ),
-                    )}
+                        <h4 className="text-lg font-semibold text-gray-800">{label}</h4>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
