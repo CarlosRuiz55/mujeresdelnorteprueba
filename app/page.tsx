@@ -479,7 +479,6 @@ export default function Home() {
                       </div>
                       <div>
                         <h4 className="font-medium text-primary">Teléfono</h4>
-                        <p className="text-gray-700">+505 1234 5678</p>
                         <p className="text-gray-700">+505 8765 4321</p>
                       </div>
                     </div>
@@ -503,8 +502,7 @@ export default function Home() {
                       </div>
                       <div>
                         <h4 className="font-medium text-primary">Correo Electrónico</h4>
-                        <p className="text-gray-700">info@mujeresdelnorte.org</p>
-                        <p className="text-gray-700">ventas@mujeresdelnorte.org</p>
+                        <p className="text-gray-700">mujeresdelnorte.rl@gmail.com</p>
                       </div>
                     </div>
 
@@ -527,7 +525,7 @@ export default function Home() {
                       </div>
                       <div>
                         <h4 className="font-medium text-primary">Ubicación</h4>
-                        <p className="text-gray-700">Esteli, Nicaragua</p>
+                        <p className="text-gray-700">Pueblo Nuevo, Esteli, Nicaragua</p>
                         <p className="text-gray-700">Región Norte, Centroamérica</p>
                       </div>
                     </div>
@@ -600,26 +598,7 @@ export default function Home() {
                 empoderamiento femenino.
               </p>
               <div className="flex gap-4">
-                <a
-                  href="#"
-                  className="group flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition-colors hover:bg-white/20"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="transition-transform group-hover:scale-110"
-                  >
-                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-                  </svg>
-                  <span className="sr-only">Facebook</span>
-                </a>
+                {/* Instagram */}
                 <a
                   href="#"
                   className="group flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition-colors hover:bg-white/20"
@@ -642,25 +621,23 @@ export default function Home() {
                   </svg>
                   <span className="sr-only">Instagram</span>
                 </a>
+
+                {/* TikTok */}
                 <a
-                  href="#"
+                  href="https://www.tiktok.com/@coopmujeresdelnorte?is_from_webapp=1&sender_device=pc"
                   className="group flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition-colors hover:bg-white/20"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 256 256"
                     width="20"
                     height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
+                    fill="currentColor"
                     className="transition-transform group-hover:scale-110"
                   >
-                    <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
+                    <path d="M232,72.58a63.87,63.87,0,0,1-48-23.18V152a72,72,0,1,1-72-72,8,8,0,0,1,0,16,56,56,0,1,0,56,56V24a8,8,0,0,1,13.52-5.66A48,48,0,0,0,232,64a8,8,0,0,1,0,16Z" />
                   </svg>
-                  <span className="sr-only">Twitter</span>
+                  <span className="sr-only">TikTok</span>
                 </a>
               </div>
             </div>
@@ -692,20 +669,14 @@ export default function Home() {
             <div>
               <h3 className="mb-6 text-lg font-bold">Nuestros Productos</h3>
               <nav className="grid gap-3">
-                <Link href="#" className="text-white/80 hover:text-white transition-colors">
+                <Link href="#productos" className="text-white/80 hover:text-white transition-colors">
                   Café Oro SHG
                 </Link>
-                <Link href="#" className="text-white/80 hover:text-white transition-colors">
+                <Link href="#productos" className="text-white/80 hover:text-white transition-colors">
                   Miel de Abeja
                 </Link>
-                <Link href="#" className="text-white/80 hover:text-white transition-colors">
+                <Link href="#productos" className="text-white/80 hover:text-white transition-colors">
                   Flor de Jamaica
-                </Link>
-                <Link href="#" className="text-white/80 hover:text-white transition-colors">
-                  Productos Derivados
-                </Link>
-                <Link href="#" className="text-white/80 hover:text-white transition-colors">
-                  Paquetes Especiales
                 </Link>
               </nav>
             </div>

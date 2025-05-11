@@ -11,7 +11,7 @@ const products = [
     id: 1,
     name: "Café Oro SHG",
     description:
-      "Nuestro café oro SHG (Strictly High Grown) es cultivado en alturas superiores a los 1,200 metros sobre el nivel del mar, bajo sombra y con prácticas sostenibles. Su sabor es excepcional, con notas de chocolate, caramelo y frutas cítricas.",
+      "Nuestro café oro SHG (Strictly High Grown) es cultivado en alturas superiores a los 1,200 metros sobre el nivel del mar, bajo sombra y con prácticas sostenibles.",
     color: "#8B4513",
     image: "/bannercafeoro.png?height=600&width=600&text=Café+Oro+SHG",
     icon: Coffee,
@@ -20,14 +20,13 @@ const products = [
       "Proceso de beneficiado húmedo",
       "Secado al sol",
       "Certificación orgánica",
-      "Notas de chocolate y caramelo",
     ],
   },
   {
     id: 2,
     name: "Miel de Abeja",
     description:
-      "Nuestra miel de abeja es 100% natural y orgánica, recolectada de colmenas ubicadas en bosques vírgenes. Su sabor es suave y delicado, con un aroma floral distintivo que refleja la biodiversidad de nuestra región.",
+      "Nuestra miel de abeja es 100% natural y orgánica. Su sabor es suave y delicado, con un aroma floral distintivo que refleja la biodiversidad de nuestra región.",
     color: "#DAA520",
     image: "/miel.webp?height=600&width=600&text=Miel+de+Abeja",
     icon: Droplet,
@@ -185,15 +184,9 @@ export default function ProductCarousel() {
                   <Button
                     className="rounded-full px-8"
                     style={{ backgroundColor: currentProduct.color, color: "white" }}
+                    asChild
                   >
-                    Más información
-                  </Button>
-                  <Button
-                    variant="outline"
-                    className="rounded-full border-2 px-8"
-                    style={{ borderColor: `${currentProduct.color}50`, color: currentProduct.color }}
-                  >
-                    Solicitar muestra
+                    <a href="#contacto">Más información</a>
                   </Button>
                 </div>
               </div>
@@ -211,15 +204,13 @@ export default function ProductCarousel() {
               setDirection(index > currentIndex ? 1 : -1)
               setCurrentIndex(index)
             }}
-            className={`group relative h-3 w-12 overflow-hidden rounded-full transition-all ${
-              index === currentIndex ? "bg-primary" : "bg-gray-300"
-            }`}
+            className={`group relative h-3 w-12 overflow-hidden rounded-full transition-all ${index === currentIndex ? "bg-primary" : "bg-gray-300"
+              }`}
             aria-label={`Ver ${product.name}`}
           >
             <span
-              className={`absolute left-0 top-0 h-full w-full transform transition-transform duration-2000 ease-in-out ${
-                index === currentIndex ? "translate-x-0" : "-translate-x-full"
-              }`}
+              className={`absolute left-0 top-0 h-full w-full transform transition-transform duration-2000 ease-in-out ${index === currentIndex ? "translate-x-0" : "-translate-x-full"
+                }`}
               style={{ backgroundColor: product.color }}
             ></span>
           </button>
