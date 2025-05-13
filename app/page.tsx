@@ -7,6 +7,7 @@ import CertificationGrid from "@/components/certification-grid"
 import ContactForm from "@/components/contact-form"
 import { ArrowRight, ChevronDown } from "lucide-react"
 import TestimonialSlider from "@/components/testimonial-slider"
+import MobileMenuToggle from "@/components/MobileMenuToggle"
 
 export default function Home() {
   return (
@@ -73,25 +74,8 @@ export default function Home() {
               <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-primary transition-all duration-300 group-hover:w-full"></span>
             </Link>
           </nav>
-          <Button variant="outline" size="icon" className="md:hidden">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="lucide lucide-menu"
-            >
-              <line x1="4" x2="20" y1="12" y2="12" />
-              <line x1="4" x2="20" y1="6" y2="6" />
-              <line x1="4" x2="20" y1="18" y2="18" />
-            </svg>
-            <span className="sr-only">Toggle menu</span>
-          </Button>
+          {/* Menu resposive movil */}
+          <MobileMenuToggle />
         </div>
       </header>
 
