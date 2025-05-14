@@ -92,3 +92,6 @@ body {
     @apply bg-background text-foreground;
   }
 }
+.divprueba{
+  background-color: rgba(0, 0, 0, 0.7);
+}

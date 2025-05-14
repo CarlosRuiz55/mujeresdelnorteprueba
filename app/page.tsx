@@ -16,18 +16,20 @@ export default function Home() {
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-20 items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="relative h-12 w-12 overflow-hidden rounded-full border-2 border-primary/20 shadow-lg">
-              <Image
-                src="/feminismo.svg?height=48&width=48&text=Logo"
-                alt="Mujeres del Norte Logo"
-                width={48}
-                height={48}
-                className="object-cover"
-              />
+            <div className="relative h-12 w-12 overflow-hidden rounded-full border-2 border-primary/20 shadow-lg bg-white">
+              <Link href="#inicio">
+                <Image
+                  src="/feminismo.svg?height=48&width=48&text=Logo"
+                  alt="Mujeres del Norte Logo"
+                  width={48}
+                  height={48}
+                  className="object-cover cursor-pointer"
+                />
+              </Link>
             </div>
             <div>
               <span className="block text-xl font-bold tracking-tight text-primary">Mujeres del Norte</span>
-              <span className="text-xs text-muted-foreground">Cooperativa Multisectorial</span>
+              <span className="text-xs text-foreground/80">Cooperativa Multisectorial</span>
             </div>
           </div>
           <nav className="hidden md:flex gap-8">
@@ -89,43 +91,50 @@ export default function Home() {
 
           <div className="relative h-screen max-h-[800px] overflow-hidden">
             <Image
-              src="/mujeresconcafe.webp"
+              src="/farming-6959629.jpg"
               alt="Mujeres del Norte - Cooperativa de mujeres productoras"
               fill
               className="object-cover object-center"
               priority
             />
 
-            <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center text-white">
-              {/* Badge con efecto de pulso */}
-              <div className="mb-5 animate-pulse rounded-full border border-white/30 bg-white/10 px-6 py-1 text-sm backdrop-blur-sm shadow-lg">
-                Empoderamiento femenino en el sector agroindustrial
-              </div>
+            <div className="relative w-full h-screen">
+              {/* Overlay oscuro */}
+              <div className="absolute inset-0 bg-black/40 z-0"></div>
 
-              {/* Título impactante */}
-              <h1 className="text-5xl md:text-7xl font-bold font-serif leading-tight text-white drop-shadow-[2px_2px_4px_rgba(0,0,0,0.7)]">
-                Mujeres
-                <span className="block mt-2 text-[#f4a10b]">del Norte</span>
-              </h1>
-              {/* Subtítulo más fuerte */}
-              <p className="mt-4 text-xl text-white drop-shadow-[1px_1px_3px_rgba(0,0,0,0.7)] max-w-xl">
-                Cooperativa de mujeres productoras de café oro, miel de abeja y flor de Jamaica con calidad certificada.
-              </p>
+              {/* Contenido principal */}
+              <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-6 text-center text-white">
+                {/* Badge con efecto de pulso */}
+                <div className="mb-5 rounded-full border border-white/30 bg-white/10 px-6 py-1 text-sm backdrop-blur-sm shadow-lg">
+                  Empoderamiento femenino en el sector agroindustrial
+                </div>
 
-              {/* Botones visibles */}
-              <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                <Link
-                  href="#productos"
-                  className="rounded-full bg-[#c41e3a] px-6 py-3 text-white font-semibold shadow-lg hover:scale-105 transition-transform" // <-- Color actualizado aquí
-                >
-                  Nuestros Productos →
-                </Link>
-                <Link
-                  href="#contacto"
-                  className="rounded-full border border-white/40 bg-white/10 px-6 py-3 text-white font-semibold backdrop-blur-sm hover:bg-white/20 transition"
-                >
-                  Contacto
-                </Link>
+                {/* Título impactante */}
+                <h1 className="text-5xl md:text-7xl font-bold font-serif leading-tight text-white drop-shadow-[2px_2px_4px_rgba(0,0,0,0.7)]">
+                  Mujeres
+                  <span className="block mt-2 text-[#6aa84f]">del Norte</span>
+                </h1>
+
+                {/* Subtítulo más fuerte */}
+                <p className="mt-4 text-xl text-white drop-shadow-[1px_1px_3px_rgba(0,0,0,0.7)] max-w-xl">
+                  Cooperativa de mujeres productoras de café oro, miel de abeja y flor de Jamaica con calidad certificada.
+                </p>
+
+                {/* Botones visibles */}
+                <div className="mt-8 flex flex-col sm:flex-row gap-4">
+                  <Link
+                    href="#productos"
+                    className="rounded-full bg-[#c41e3a] px-6 py-3 text-white font-semibold shadow-lg hover:scale-105 transition-transform"
+                  >
+                    Nuestros Productos →
+                  </Link>
+                  <Link
+                    href="#contacto"
+                    className="rounded-full border border-white/40 bg-white/10 px-6 py-3 text-white font-semibold backdrop-blur-sm hover:bg-white/20 transition"
+                  >
+                    Contacto
+                  </Link>
+                </div>
               </div>
             </div>
 
@@ -209,7 +218,7 @@ export default function Home() {
                 </div>
 
                 <div>
-                  <h3 className="mb-8 text-4xl font-extrabold text-center text-primary">
+                  <h3 className="mb-4 text-2xl font-bold text-primary">
                     Nuestros Valores
                   </h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
@@ -542,7 +551,7 @@ export default function Home() {
         <section className="h-[400px] bg-gray-200">
           <div className="relative h-full w-full">
             <Image
-              src="/diosas.jpg?height=400&width=1920&text=Mapa+Jinotega+Nicaragua"
+              src="/plantillos.jpg?height=400&width=1920&text=Mapa+Jinotega+Nicaragua"
               alt="Mapa de ubicación"
               fill
               className="object-cover"
@@ -563,7 +572,7 @@ export default function Home() {
           <div className="grid gap-12 md:grid-cols-4">
             <div className="space-y-4">
               <div className="flex items-center gap-3">
-                <div className="relative h-12 w-12 overflow-hidden rounded-full border-2 border-white/20 shadow-lg">
+                <div className="relative h-12 w-12 overflow-hidden rounded-full border-2 border-white/20 shadow-lg bg-white">
                   <Image
                     src="/feminismo.svg?height=48&width=48&text=Logo"
                     alt="Mujeres del Norte Logo"
