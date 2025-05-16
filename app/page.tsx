@@ -402,9 +402,28 @@ export default function Home() {
               <div className="mt-4 h-1 w-20 bg-gradient-to-r from-primary/60 to-primary mx-auto rounded-full"></div>
             </div>
 
+            {/* Carrusel de procesos */}
             <ProcessTimeline />
+
+            {/* Video explicativo */}
+            <div className="mt-8 text-center px-4">
+              <h3 className="mb-4 text-2xl font-bold text-primary">Video explicativo</h3>
+              <div className="flex justify-center">
+                <div className="w-full max-w-4xl aspect-video">
+                  <iframe
+                    className="w-full h-full rounded-md shadow-md"
+                    src="/procesomujeresdelnorterl.mp4"
+                    title="Proceso mujeres del norte"
+                    frameBorder="0"
+                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
+
 
         {/* Certifications Section */}
         <section id="certificaciones" className="bg-gradient-to-br from-amber-50 to-amber-100 py-24">
