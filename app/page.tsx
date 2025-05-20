@@ -172,7 +172,7 @@ export default function Home() {
                 <div className="absolute -bottom-6 -right-6 h-64 w-64 rounded-full border border-primary/20"></div>
                 <div className="relative h-[600px] overflow-hidden rounded-2xl shadow-2xl">
                   <Image
-                    src="/presidenta.jpg?height=1200&width=800&text=Mujeres+Trabajando"
+                    src="/personamiel.jpg?height=1200&width=800&text=Mujer+Trabajando"
                     alt="Mujeres productoras trabajando"
                     fill
                     className="object-cover"
@@ -184,7 +184,6 @@ export default function Home() {
                         "Nuestro trabajo no solo produce alimentos de calidad, sino que transforma vidas y comunidades
                         enteras."
                       </p>
-                      <footer className="font-medium">— Presidenta de la Cooperativa</footer>
                     </blockquote>
                   </div>
                 </div>

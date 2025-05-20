@@ -79,15 +79,15 @@ const processSteps = [
 const getImageById = (id: number): string => {
   switch (id) {
     case 1:
-      return "/cultivoresp.jpg"
+      return "/recurso1.jpg"
     case 2:
-      return "/selectiva.jpg"
+      return "/recurso2.jpeg"
     case 3:
-      return "/procesamientomiel.jpeg"
+      return "/recurso3.jpeg"
     case 4:
-      return "/calidad.jpg"
+      return "/recurso4.jpg"
     case 5:
-      return "/empaque.webp"
+      return "/recurso5.jpg"
     default:
       return "/images/default.png"
   }
@@ -137,12 +137,12 @@ export default function ProcessTimeline() {
 
             {/* Image */}
             <div className={`${index % 2 === 0 ? "md:order-last" : "md:order-first"}`}>
-              <div className="relative h-[250px] overflow-hidden rounded-lg shadow-lg">
+              <div className="relative h-[265px] overflow-hidden rounded-lg shadow-lg">
                 <Image
                   src={getImageById(step.id)}
                   alt={step.title}
                   fill
-                  className="object-cover transition-transform hover:scale-105"
+                  className="object-cover object-top transition-transform hover:scale-105"
                 />
               </div>
             </div>
