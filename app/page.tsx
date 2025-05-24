@@ -19,7 +19,7 @@ export default function Home() {
             <div className="relative h-12 w-12 overflow-hidden rounded-full border-2 border-primary/20 shadow-lg bg-white">
               <Link href="#inicio">
                 <Image
-                  src="/feminismo.svg?height=48&width=48&text=Logo"
+                  src="/COPEMUJERWEB.png?height=48&width=48&text=Logo"
                   alt="Mujeres del Norte Logo"
                   width={48}
                   height={48}
@@ -84,7 +84,6 @@ export default function Home() {
       <main className="flex-1">
         {/* Hero Section */}
         <section id="inicio" className="relative">
-          {/* Fondo gradiente más suave solo detrás del texto */}
           <div className="absolute inset-0">
             <div className="absolute inset-0 bg-black/30"></div>
           </div>
@@ -215,133 +214,136 @@ export default function Home() {
                     empoderamiento económico, social y productivo de las mujeres rurales
                   </p>
                 </div>
-
-                <div>
-                  <h3 className="mb-4 text-2xl font-bold text-primary">
-                    Nuestros Valores
-                  </h3>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                    {[
-                      {
-                        label: "Empoderamiento femenino",
-                        icon: (
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="h-10 w-10 text-white"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                          >
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14v7m-4-4h8m-4-7a4 4 0 100-8 4 4 0 000 8z" />
-                          </svg>
-                        ),
-                        color: "bg-pink-500",
-                      },
-                      {
-                        label: "Solidaridad",
-                        icon: (
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="h-10 w-10 text-white"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                          >
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.333 0-2.667 1.333-4 4 1.333 2.667 2.667 4 4 4s2.667-1.333 4-4c-1.333-2.667-2.667-4-4-4z" />
-                          </svg>
-                        ),
-                        color: "bg-emerald-500",
-                      },
-                      {
-                        label: "Autonomía",
-                        icon: (
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="h-10 w-10 text-white"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                          >
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                          </svg>
-                        ),
-                        color: "bg-indigo-500",
-                      },
-                      {
-                        label: "Educación",
-                        icon: (
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="h-10 w-10 text-white"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                          >
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l6.16-3.422A12.083 12.083 0 0112 21.5a12.083 12.083 0 01-6.16-10.922L12 14z" />
-                          </svg>
-                        ),
-                        color: "bg-blue-500",
-                      },
-                      {
-                        label: "Cooperación",
-                        icon: (
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="h-10 w-10 text-white"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                          >
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 8h10M7 12h4m1 8a9 9 0 110-18 9 9 0 010 18z" />
-                          </svg>
-                        ),
-                        color: "bg-yellow-500",
-                      },
-                      {
-                        label: "Respeto",
-                        icon: (
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="h-10 w-10 text-white"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                          >
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 11c0-1.105.895-2 2-2h6a2 2 0 012 2v4a2 2 0 01-2 2h-6a2 2 0 01-2-2v-4z M2 12h4v-4v8" />
-                          </svg>
-                        ),
-                        color: "bg-red-500",
-                      },
-                      {
-                        label: "Igualdad",
-                        icon: (
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="h-10 w-10 text-white"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                          >
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 17H8m8-4H8m8-4H8" />
-                          </svg>
-                        ),
-                        color: "bg-purple-500",
-                      },
-                    ].map(({ label, icon, color }, index) => (
-                      <div
-                        key={index}
-                        className="flex flex-col items-center justify-center rounded-2xl border border-primary/10 bg-white p-6 shadow-lg transition-transform hover:scale-105 hover:shadow-xl text-center"
-                      >
-                        <div className={`mb-4 flex h-14 w-14 items-center justify-center rounded-full ${color} shadow-md`}>
-                          {icon}
-                        </div>
-                        <h4 className="text-lg font-semibold text-gray-800">{label}</h4>
-                      </div>
-                    ))}
-                  </div>
-                </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Valores */}
+        <section className="relative overflow-hidden py-24">
+          <div className="w-full flex flex-col items-center justify-center text-center py-12 px-4">
+            <h3 className="mb-8 text-3xl font-bold text-primary">
+              Nuestros Valores
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+              {[
+                {
+                  label: "Empoderamiento femenino",
+                  icon: (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-10 w-10 text-white"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14v7m-4-4h8m-4-7a4 4 0 100-8 4 4 0 000 8z" />
+                    </svg>
+                  ),
+                  color: "bg-pink-500",
+                },
+                {
+                  label: "Solidaridad",
+                  icon: (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-10 w-10 text-white"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.333 0-2.667 1.333-4 4 1.333 2.667 2.667 4 4 4s2.667-1.333 4-4c-1.333-2.667-2.667-4-4-4z" />
+                    </svg>
+                  ),
+                  color: "bg-emerald-500",
+                },
+                {
+                  label: "Autonomía",
+                  icon: (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-10 w-10 text-white"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  ),
+                  color: "bg-indigo-500",
+                },
+                {
+                  label: "Educación",
+                  icon: (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-10 w-10 text-white"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l6.16-3.422A12.083 12.083 0 0112 21.5a12.083 12.083 0 01-6.16-10.922L12 14z" />
+                    </svg>
+                  ),
+                  color: "bg-blue-500",
+                },
+                {
+                  label: "Cooperación",
+                  icon: (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-10 w-10 text-white"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 8h10M7 12h4m1 8a9 9 0 110-18 9 9 0 010 18z" />
+                    </svg>
+                  ),
+                  color: "bg-yellow-500",
+                },
+                {
+                  label: "Respeto",
+                  icon: (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-10 w-10 text-white"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 11c0-1.105.895-2 2-2h6a2 2 0 012 2v4a2 2 0 01-2 2h-6a2 2 0 01-2-2v-4z M2 12h4v-4v8" />
+                    </svg>
+                  ),
+                  color: "bg-red-500",
+                },
+                {
+                  label: "Igualdad",
+                  icon: (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-10 w-10 text-white"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 17H8m8-4H8m8-4H8" />
+                    </svg>
+                  ),
+                  color: "bg-purple-500",
+                },
+              ].map(({ label, icon, color }, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col items-center justify-center rounded-2xl border border-primary/10 bg-white p-6 shadow-lg transition-transform hover:scale-105 hover:shadow-xl text-center"
+                >
+                  <div className={`mb-4 flex h-14 w-14 items-center justify-center rounded-full ${color} shadow-md`}>
+                    {icon}
+                  </div>
+                  <h4 className="text-lg font-semibold text-gray-800">{label}</h4>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -718,7 +720,7 @@ export default function Home() {
           </div>
         </div>
       </footer>
-    </div>
+    </div >
   )
 }
 
