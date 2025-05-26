@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { ChevronLeft, ChevronRight, Coffee, Droplet, Flower } from "lucide-react"
+import { ChevronLeft, ChevronRight, Coffee, Droplet, Flower, Wheat } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 
 const products = [
@@ -13,7 +13,7 @@ const products = [
     description:
       "Nuestro café oro SHG (Strictly High Grown) es cultivado en alturas superiores a los 1,200 metros sobre el nivel del mar, bajo sombra y con prácticas sostenibles.",
     color: "#8B4513",
-    image: "/bannercafeoro.png?height=600&width=600&text=Café+Oro+SHG",
+    image: "/productocafe.png?height=600&width=600&text=Café+Oro+SHG",
     icon: Coffee,
     features: [
       "Cultivado en altura (1,200+ msnm)",
@@ -28,7 +28,7 @@ const products = [
     description:
       "Nuestra miel de abeja es 100% natural y orgánica. Su sabor es suave y delicado, con un aroma floral distintivo que refleja la biodiversidad de nuestra región.",
     color: "#DAA520",
-    image: "/miel.webp?height=600&width=600&text=Miel+de+Abeja",
+    image: "/productomiel.png?height=600&width=600&text=Miel+de+Abeja",
     icon: Droplet,
     features: [
       "100% pura y natural",
@@ -54,6 +54,22 @@ const products = [
       "Versátil para múltiples usos",
     ],
   },
+  {
+  id: 4,
+  name: "Granos Básicos",
+  description:
+    "Nuestros granos básicos Frijol, Maíz y Sorgo son seleccionados cuidadosamente para garantizar calidad, frescura y valor nutricional. Cultivados de manera sostenible, forman la base de una alimentación saludable y equilibrada.",
+  color: "#D4A373",
+  image: "/granosbasicos.png?height=600&width=600&text=Granos+Básicos",
+  icon: Wheat,
+  features: [
+    "Ricos en proteínas, fibra y energía natural",
+    "Cultivo responsable y sostenible",
+    "Ideales para una variedad de platillos tradicionales",
+    "Libre de agroquímicos sintéticos",
+  ],
+},
+
 ]
 
 export default function ProductCarousel() {

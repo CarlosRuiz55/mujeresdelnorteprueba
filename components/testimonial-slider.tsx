@@ -14,7 +14,7 @@ const testimonials = [
     role: "Importador de Café, España",
     content:
       "La calidad del café oro de Mujeres del Norte es excepcional. Su compromiso con la sostenibilidad y el comercio justo se refleja en cada grano. Estamos orgullosos de ser sus socios comerciales.",
-    image: "/persona1.jpg?height=100&width=100&text=Carlos",
+    image: "/persona4.jpeg?height=100&width=100&text=Carlos",
   },
   {
     id: 2,
