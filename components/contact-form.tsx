@@ -1,18 +1,13 @@
 "use client"
 
 import type React from "react"
+
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { motion } from "framer-motion"
 
 export default function ContactForm() {
@@ -26,9 +21,7 @@ export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
@@ -47,7 +40,7 @@ export default function ContactForm() {
       setIsSubmitting(false)
       setIsSubmitted(true)
 
-      // Reset form
+      // Reset form after 3 seconds
       setTimeout(() => {
         setIsSubmitted(false)
         setFormData({
@@ -86,101 +79,117 @@ export default function ContactForm() {
               <polyline points="22 4 12 14.01 9 11.01" />
             </svg>
           </div>
-          <h3 className="mb-2 text-xl font-bold text-green-800">
-            ¡Mensaje Enviado!
-          </h3>
-          <p className="text-green-700">
-            Gracias por contactarnos. Te responderemos a la brevedad.
-          </p>
+          <h3 className="mb-2 text-xl font-bold text-green-800">¡Mensaje Enviado!</h3>
+          <p className="text-green-700">Gracias por contactarnos. Te responderemos a la brevedad.</p>
         </motion.div>
       ) : (
-        <form
-          onSubmit={handleSubmit}
-          name="contact"
-          method="POST"
-          data-netlify="true"
-          className="grid gap-6"
-        >
-          {/* Campo oculto requerido por Netlify */}
-          <input type="hidden" name="form-name" value="contact" />
-
+        <form onSubmit={handleSubmit} className="grid gap-6">
           <div className="grid gap-3">
-            <Label htmlFor="name">Nombre completo</Label>
+            <Label htmlFor="name" className="text-sm font-medium">
+              Nombre completo
+            </Label>
             <Input
               id="name"
               name="name"
-              required
               placeholder="Tu nombre"
+              required
               value={formData.name}
               onChange={handleChange}
+              className="rounded-lg border-primary/20 bg-white/50 px-4 py-3 focus:border-primary focus:ring-primary"
             />
           </div>
-
           <div className="grid gap-3">
-            <Label htmlFor="email">Correo electrónico</Label>
+            <Label htmlFor="email" className="text-sm font-medium">
+              Correo electrónico
+            </Label>
             <Input
               id="email"
               name="email"
               type="email"
-              required
               placeholder="tu@email.com"
+              required
               value={formData.email}
               onChange={handleChange}
+              className="rounded-lg border-primary/20 bg-white/50 px-4 py-3 focus:border-primary focus:ring-primary"
             />
           </div>
-
           <div className="grid gap-3">
-            <Label htmlFor="phone">Teléfono</Label>
+            <Label htmlFor="phone" className="text-sm font-medium">
+              Teléfono
+            </Label>
             <Input
               id="phone"
               name="phone"
               placeholder="Tu número de teléfono"
               value={formData.phone}
               onChange={handleChange}
+              className="rounded-lg border-primary/20 bg-white/50 px-4 py-3 focus:border-primary focus:ring-primary"
             />
           </div>
-
           <div className="grid gap-3">
-            <Label htmlFor="subject">Asunto</Label>
-            <Select
-              onValueChange={handleSelectChange}
-              value={formData.subject}
-            >
-              <SelectTrigger id="subject">
+            <Label htmlFor="subject" className="text-sm font-medium">
+              Asunto
+            </Label>
+            <Select onValueChange={handleSelectChange} value={formData.subject}>
+              <SelectTrigger
+                id="subject"
+                className="rounded-lg border-primary/20 bg-white/50 px-4 py-3 focus:border-primary focus:ring-primary"
+              >
                 <SelectValue placeholder="Selecciona un asunto" />
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="info">Información general</SelectItem>
                 <SelectItem value="purchase">Compra de productos</SelectItem>
                 <SelectItem value="wholesale">Ventas al por mayor</SelectItem>
-                <SelectItem value="partnership">
-                  Propuesta de colaboración
-                </SelectItem>
+                <SelectItem value="partnership">Propuesta de colaboración</SelectItem>
                 <SelectItem value="other">Otro</SelectItem>
               </SelectContent>
             </Select>
           </div>
-
           <div className="grid gap-3">
-            <Label htmlFor="message">Mensaje</Label>
+            <Label htmlFor="message" className="text-sm font-medium">
+              Mensaje
+            </Label>
             <Textarea
               id="message"
               name="message"
+              placeholder="Escribe tu mensaje aquí..."
               rows={5}
               required
-              placeholder="Escribe tu mensaje aquí..."
               value={formData.message}
               onChange={handleChange}
+              className="rounded-lg border-primary/20 bg-white/50 px-4 py-3 focus:border-primary focus:ring-primary"
             />
           </div>
-
-          <Button type="submit" disabled={isSubmitting}>
-            {isSubmitting ? "Enviando..." : "Enviar mensaje"}
+          <Button
+            type="submit"
+            disabled={isSubmitting}
+            className="relative mt-2 overflow-hidden rounded-lg bg-gradient-to-r from-primary to-amber-600 px-6 py-3 font-medium text-white transition-all hover:from-primary/90 hover:to-amber-500"
+          >
+            {isSubmitting ? (
+              <div className="flex items-center gap-2">
+                <svg
+                  className="h-5 w-5 animate-spin"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                  <path
+                    className="opacity-75"
+                    fill="currentColor"
+                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                  ></path>
+                </svg>
+                Enviando...
+              </div>
+            ) : (
+              "Enviar mensaje"
+            )}
           </Button>
         </form>
       )}
     </>
   )
 }
-
 
