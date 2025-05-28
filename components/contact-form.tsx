@@ -1,18 +1,13 @@
 "use client"
 
 import type React from "react"
+
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { motion } from "framer-motion"
 
 export default function ContactForm() {
@@ -26,9 +21,7 @@ export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
@@ -90,42 +83,40 @@ export default function ContactForm() {
           <p className="text-green-700">Gracias por contactarnos. Te responderemos a la brevedad.</p>
         </motion.div>
       ) : (
-        <form
-          name="contact"
-          method="POST"
-          data-netlify="true"
-          onSubmit={handleSubmit}
-          className="grid gap-6"
-        >
-          <input type="hidden" name="form-name" value="contact" />
-
+        <form onSubmit={handleSubmit} className="grid gap-6">
           <div className="grid gap-3">
-            <Label htmlFor="name">Nombre completo</Label>
+            <Label htmlFor="name" className="text-sm font-medium">
+              Nombre completo
+            </Label>
             <Input
               id="name"
               name="name"
-              required
               placeholder="Tu nombre"
+              required
               value={formData.name}
               onChange={handleChange}
               className="rounded-lg border-primary/20 bg-white/50 px-4 py-3 focus:border-primary focus:ring-primary"
             />
           </div>
           <div className="grid gap-3">
-            <Label htmlFor="email">Correo electrónico</Label>
+            <Label htmlFor="email" className="text-sm font-medium">
+              Correo electrónico
+            </Label>
             <Input
               id="email"
               name="email"
               type="email"
-              required
               placeholder="tu@email.com"
+              required
               value={formData.email}
               onChange={handleChange}
               className="rounded-lg border-primary/20 bg-white/50 px-4 py-3 focus:border-primary focus:ring-primary"
             />
           </div>
           <div className="grid gap-3">
-            <Label htmlFor="phone">Teléfono</Label>
+            <Label htmlFor="phone" className="text-sm font-medium">
+              Teléfono
+            </Label>
             <Input
               id="phone"
               name="phone"
@@ -136,7 +127,9 @@ export default function ContactForm() {
             />
           </div>
           <div className="grid gap-3">
-            <Label htmlFor="subject">Asunto</Label>
+            <Label htmlFor="subject" className="text-sm font-medium">
+              Asunto
+            </Label>
             <Select onValueChange={handleSelectChange} value={formData.subject}>
               <SelectTrigger
                 id="subject"
@@ -154,13 +147,15 @@ export default function ContactForm() {
             </Select>
           </div>
           <div className="grid gap-3">
-            <Label htmlFor="message">Mensaje</Label>
+            <Label htmlFor="message" className="text-sm font-medium">
+              Mensaje
+            </Label>
             <Textarea
               id="message"
               name="message"
-              required
               placeholder="Escribe tu mensaje aquí..."
               rows={5}
+              required
               value={formData.message}
               onChange={handleChange}
               className="rounded-lg border-primary/20 bg-white/50 px-4 py-3 focus:border-primary focus:ring-primary"
@@ -197,3 +192,4 @@ export default function ContactForm() {
     </>
   )
 }
+
