@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -34,13 +33,10 @@ export default function ContactForm() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate API call
+    // Simulación de envío exitoso
     setTimeout(() => {
-      console.log("Form submitted:", formData)
       setIsSubmitting(false)
       setIsSubmitted(true)
-
-      // Reset form after 3 seconds
       setTimeout(() => {
         setIsSubmitted(false)
         setFormData({
@@ -83,11 +79,17 @@ export default function ContactForm() {
           <p className="text-green-700">Gracias por contactarnos. Te responderemos a la brevedad.</p>
         </motion.div>
       ) : (
-        <form onSubmit={handleSubmit} className="grid gap-6">
+        <form
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          onSubmit={handleSubmit}
+          className="grid gap-6"
+        >
+          <input type="hidden" name="form-name" value="contact" />
+          
           <div className="grid gap-3">
-            <Label htmlFor="name" className="text-sm font-medium">
-              Nombre completo
-            </Label>
+            <Label htmlFor="name" className="text-sm font-medium">Nombre completo</Label>
             <Input
               id="name"
               name="name"
@@ -98,10 +100,9 @@ export default function ContactForm() {
               className="rounded-lg border-primary/20 bg-white/50 px-4 py-3 focus:border-primary focus:ring-primary"
             />
           </div>
+
           <div className="grid gap-3">
-            <Label htmlFor="email" className="text-sm font-medium">
-              Correo electrónico
-            </Label>
+            <Label htmlFor="email" className="text-sm font-medium">Correo electrónico</Label>
             <Input
               id="email"
               name="email"
@@ -113,10 +114,9 @@ export default function ContactForm() {
               className="rounded-lg border-primary/20 bg-white/50 px-4 py-3 focus:border-primary focus:ring-primary"
             />
           </div>
+
           <div className="grid gap-3">
-            <Label htmlFor="phone" className="text-sm font-medium">
-              Teléfono
-            </Label>
+            <Label htmlFor="phone" className="text-sm font-medium">Teléfono</Label>
             <Input
               id="phone"
               name="phone"
@@ -126,13 +126,13 @@ export default function ContactForm() {
               className="rounded-lg border-primary/20 bg-white/50 px-4 py-3 focus:border-primary focus:ring-primary"
             />
           </div>
+
           <div className="grid gap-3">
-            <Label htmlFor="subject" className="text-sm font-medium">
-              Asunto
-            </Label>
+            <Label htmlFor="subject" className="text-sm font-medium">Asunto</Label>
             <Select onValueChange={handleSelectChange} value={formData.subject}>
               <SelectTrigger
                 id="subject"
+                name="subject"
                 className="rounded-lg border-primary/20 bg-white/50 px-4 py-3 focus:border-primary focus:ring-primary"
               >
                 <SelectValue placeholder="Selecciona un asunto" />
@@ -146,10 +146,9 @@ export default function ContactForm() {
               </SelectContent>
             </Select>
           </div>
+
           <div className="grid gap-3">
-            <Label htmlFor="message" className="text-sm font-medium">
-              Mensaje
-            </Label>
+            <Label htmlFor="message" className="text-sm font-medium">Mensaje</Label>
             <Textarea
               id="message"
               name="message"
@@ -161,6 +160,7 @@ export default function ContactForm() {
               className="rounded-lg border-primary/20 bg-white/50 px-4 py-3 focus:border-primary focus:ring-primary"
             />
           </div>
+
           <Button
             type="submit"
             disabled={isSubmitting}
@@ -168,18 +168,9 @@ export default function ContactForm() {
           >
             {isSubmitting ? (
               <div className="flex items-center gap-2">
-                <svg
-                  className="h-5 w-5 animate-spin"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                >
+                <svg className="h-5 w-5 animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                   <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                  <path
-                    className="opacity-75"
-                    fill="currentColor"
-                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                  ></path>
+                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                 </svg>
                 Enviando...
               </div>
@@ -192,4 +183,5 @@ export default function ContactForm() {
     </>
   )
 }
+
 
