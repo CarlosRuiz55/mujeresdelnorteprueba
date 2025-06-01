@@ -1,7 +1,6 @@
 "use client"
 
-import type React from "react"
-import { useState } from "react"
+import React, { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -9,7 +8,8 @@ import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { motion } from "framer-motion"
 
-const GOOGLE_APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyPk7Jw4HZH60WD1RarBRBM7wI3ugQyWyL9sRayv23c-bk_hX9uStHyQqkDqTEG5XmVnw/exec"
+const GOOGLE_APPS_SCRIPT_URL =
+  "https://script.google.com/macros/s/AKfycbyPk7Jw4HZH60WD1RarBRBM7wI3ugQyWyL9sRayv23c-bk_hX9uStHyQqkDqTEG5XmVnw/exec"
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -40,20 +40,16 @@ export default function ContactForm() {
     try {
       const dataToSend = {
         ...formData,
-        fecha: new Date().toISOString(), // siempre envía fecha actual ISO
+        fecha: new Date().toISOString(),
       }
 
       const response = await fetch(GOOGLE_APPS_SCRIPT_URL, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(dataToSend),
       })
 
-      if (!response.ok) {
-        throw new Error(`Error en el envío: ${response.statusText}`)
-      }
+      if (!response.ok) throw new Error(`Error en el envío: ${response.statusText}`)
 
       const result = await response.json()
       console.log("Respuesta del servidor:", result)
@@ -183,9 +179,7 @@ export default function ContactForm() {
               className="rounded-lg border-primary/20 bg-white/50 px-4 py-3 focus:border-primary focus:ring-primary"
             />
           </div>
-          {error && (
-            <p className="text-sm text-red-600">{error}</p>
-          )}
+          {error && <p className="text-sm text-red-600">{error}</p>}
           <Button
             type="submit"
             disabled={isSubmitting}
