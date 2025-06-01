@@ -9,7 +9,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { motion } from "framer-motion"
 
 const GOOGLE_APPS_SCRIPT_URL =
-  "https://mujeresdelnorte.netlify.app/.netlify/function/proxy-google"
+  "https://mujeresdelnorte.netlify.app/.netlify/functions/proxy-google"
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
