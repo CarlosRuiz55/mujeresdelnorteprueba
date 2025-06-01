@@ -1,7 +1,6 @@
-
 const fetch = require("node-fetch");
 
-export async function handler(event) {
+exports.handler = async function (event) {
   const url = "https://script.google.com/macros/s/AKfycbyPk7Jw4HZH60WD1RarBRBM7wI3ugQyWyL9sRayv23c-bk_hX9uStHyQqkDqTEG5XmVnw/exec";
 
   try {
@@ -27,4 +26,5 @@ export async function handler(event) {
       body: JSON.stringify({ error: error.message }),
     };
   }
-}
+};
+
