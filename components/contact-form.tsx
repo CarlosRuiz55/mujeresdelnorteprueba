@@ -8,7 +8,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import React, { useState } from "react"
 
 // 🔁 Reemplaza esta URL por la de tu formulario (del modo 'ver' NO del editor)
-const GOOGLE_FORM_ACTION_URL = "https://docs.google.com/forms/d/e/1FAIpQLSeiooiWDIllZ9XfGavcDbasxU_v0eLYkdmbhiiZeUrwk-EBfQ/formResponse"
+const GOOGLE_FORM_ACTION_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdLa3MKm-yaUJ-ufeDmu3VYqlEaIYOtb-Tg3ptGHo55nm_TlA/formResponse"
 
 
 export default function ContactForm() {
@@ -25,7 +25,7 @@ export default function ContactForm() {
         <Label htmlFor="nombre">Nombre completo</Label>
         <Input
           id="nombre"
-          name="entry.311603781" // 🔁 Reemplaza con el ID de tu campo "Nombre"
+          name="entry.14297671" // 🔁 Reemplaza con el ID de tu campo "Nombre"
           required
           placeholder="Tu nombre"
         />
@@ -34,7 +34,7 @@ export default function ContactForm() {
         <Label htmlFor="correo">Correo electrónico</Label>
         <Input
           id="correo"
-          name="entry.605361204" // 🔁 Reemplaza con el ID de tu campo "Correo"
+          name="entry.363773858" // 🔁 Reemplaza con el ID de tu campo "Correo"
           type="email"
           required
           placeholder="tu@email.com"
@@ -44,7 +44,7 @@ export default function ContactForm() {
         <Label htmlFor="telefono">Teléfono</Label>
         <Input
           id="telefono"
-          name="entry.1201359785" // 🔁 Reemplaza con el ID de tu campo "Teléfono"
+          name="entry.859854857" // 🔁 Reemplaza con el ID de tu campo "Teléfono"
           placeholder="Tu número"
         />
       </div>
@@ -65,7 +65,7 @@ export default function ContactForm() {
         {/* Campo oculto que envía el asunto seleccionado */}
         <input
           type="hidden"
-          name="entry.1482388147" // 🔁 Reemplaza con el ID de tu campo "Asunto"
+          name="entry.1702768838" // 🔁 Reemplaza con el ID de tu campo "Asunto"
           value={asunto}
         />
       </div>
@@ -73,7 +73,7 @@ export default function ContactForm() {
         <Label htmlFor="mensaje">Mensaje</Label>
         <Textarea
           id="mensaje"
-          name="entry.1607630653" // 🔁 Reemplaza con el ID de tu campo "Mensaje"
+          name="entry.1852062817" // 🔁 Reemplaza con el ID de tu campo "Mensaje"
           rows={5}
           required
           placeholder="Escribe tu mensaje..."
