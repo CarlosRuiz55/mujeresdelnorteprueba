@@ -7,7 +7,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import React, { useState } from "react"
 
-// 🔁 Reemplaza esta URL por la de tu formulario (del modo 'ver' NO del editor)
+// 🔁 Reemplaza esta URL por la de tu formulario (del modo 'ver' NO del editor), tambien reemplazar el "entry" para cada input
 const GOOGLE_FORM_ACTION_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdLa3MKm-yaUJ-ufeDmu3VYqlEaIYOtb-Tg3ptGHo55nm_TlA/formResponse"
 
 
@@ -25,8 +25,7 @@ export default function ContactForm() {
         <Label htmlFor="nombre">Nombre completo</Label>
         <Input
           id="nombre"
-          name="entry.14297671" // 🔁 Reemplaza con el ID de tu campo "Nombre"
-          required
+          name="entry.14297671" 
           placeholder="Tu nombre"
         />
       </div>
@@ -34,7 +33,7 @@ export default function ContactForm() {
         <Label htmlFor="correo">Correo electrónico</Label>
         <Input
           id="correo"
-          name="entry.363773858" // 🔁 Reemplaza con el ID de tu campo "Correo"
+          name="entry.363773858" 
           type="email"
           required
           placeholder="tu@email.com"
@@ -44,7 +43,7 @@ export default function ContactForm() {
         <Label htmlFor="telefono">Teléfono</Label>
         <Input
           id="telefono"
-          name="entry.859854857" // 🔁 Reemplaza con el ID de tu campo "Teléfono"
+          name="entry.859854857" 
           placeholder="Tu número"
         />
       </div>
@@ -65,7 +64,7 @@ export default function ContactForm() {
         {/* Campo oculto que envía el asunto seleccionado */}
         <input
           type="hidden"
-          name="entry.1702768838" // 🔁 Reemplaza con el ID de tu campo "Asunto"
+          name="entry.1702768838" 
           value={asunto}
         />
       </div>
@@ -73,7 +72,7 @@ export default function ContactForm() {
         <Label htmlFor="mensaje">Mensaje</Label>
         <Textarea
           id="mensaje"
-          name="entry.1852062817" // 🔁 Reemplaza con el ID de tu campo "Mensaje"
+          name="entry.1852062817" 
           rows={5}
           required
           placeholder="Escribe tu mensaje..."
