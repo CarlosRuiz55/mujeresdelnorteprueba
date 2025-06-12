@@ -448,131 +448,131 @@ export default function Home() {
         </section>
 
         {/* Contact Section */}
-<section id="contacto" className="relative overflow-hidden py-16 sm:py-20 md:py-24"> {/* Adjusted vertical padding */}
-  <div className="absolute -top-[30%] -right-[10%] h-[500px] w-[500px] rounded-full bg-gradient-to-br from-amber-200/20 to-amber-500/30 blur-3xl"></div>
-  <div className="absolute -bottom-[30%] -left-[10%] h-[500px] w-[500px] rounded-full bg-gradient-to-tr from-red-200/20 to-red-500/30 blur-3xl"></div>
+        <section id="contacto" className="relative overflow-hidden py-16 sm:py-20 md:py-24"> {/* Adjusted vertical padding */}
+          <div className="absolute -top-[30%] -right-[10%] h-[500px] w-[500px] rounded-full bg-gradient-to-br from-amber-200/20 to-amber-500/30 blur-3xl"></div>
+          <div className="absolute -bottom-[30%] -left-[10%] h-[500px] w-[500px] rounded-full bg-gradient-to-tr from-red-200/20 to-red-500/30 blur-3xl"></div>
 
-  {/* Added max-w-full to container to prevent it from exceeding viewport width */}
-  {/* Added px-4 sm:px-6 lg:px-8 to ensure horizontal padding on all screen sizes */}
-  <div className="container relative mx-auto px-4 sm:px-6 lg:px-8 max-w-full"> 
-    <div className="mx-auto mb-10 sm:mb-12 md:mb-16 max-w-xl text-center"> {/* Adjusted bottom margin */}
-      <div className="mb-3 inline-block rounded-full bg-primary/10 px-3 py-1 text-sm font-medium text-primary">
-        Estamos para Servirte
-      </div>
-      {/* Adjusted font sizes for responsiveness */}
-      <h2 className="font-serif text-3xl sm:text-4xl font-bold tracking-tight text-primary md:text-5xl">Contáctanos</h2>
-      <p className="mt-3 sm:mt-4 text-base sm:text-lg text-gray-700"> {/* Adjusted margin-top and font size */}
-        Estamos interesados en escuchar tus inquietudes y establecer relaciones comerciales duraderas.
-      </p>
-      <div className="mt-3 sm:mt-4 h-1 w-20 bg-gradient-to-r from-primary/60 to-primary mx-auto rounded-full"></div> {/* Adjusted margin-top */}
-    </div>
-
-    <div className="grid gap-8 sm:gap-10 md:gap-12 md:grid-cols-2"> {/* Adjusted gap between columns */}
-      {/* Increased padding for smaller screens */}
-      <div className="rounded-2xl bg-white p-6 sm:p-8 md:p-8 shadow-xl"> 
-        <h3 className="mb-4 sm:mb-6 text-xl sm:text-2xl font-bold text-primary">Envíanos un mensaje</h3> {/* Adjusted font sizes */}
-        <ContactForm /> 
-      </div>
-
-      <div className="flex flex-col justify-center">
-        {/* Increased padding for smaller screens */}
-        <div className="mb-6 sm:mb-8 rounded-2xl bg-primary/5 p-6 sm:p-8"> 
-          <h3 className="mb-4 sm:mb-6 text-xl sm:text-2xl font-bold text-primary">Información de Contacto</h3> {/* Adjusted font sizes */}
-          <div className="space-y-4 sm:space-y-6"> {/* Adjusted space between items */}
-            {/* These items already use flexbox and gap, which is good for responsiveness */}
-            <div className="flex items-start gap-3 sm:gap-4"> 
-              <div className="flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-primary/10 text-primary"> {/* Adjusted icon container size */}
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="18" // Adjusted SVG size for smaller screens
-                  height="18" // Adjusted SVG size for smaller screens
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-                </svg>
+          {/* Added max-w-full to container to prevent it from exceeding viewport width */}
+          {/* Added px-4 sm:px-6 lg:px-8 to ensure horizontal padding on all screen sizes */}
+          <div className="container relative mx-auto px-4 sm:px-6 lg:px-8 max-w-full">
+            <div className="mx-auto mb-10 sm:mb-12 md:mb-16 max-w-xl text-center"> {/* Adjusted bottom margin */}
+              <div className="mb-3 inline-block rounded-full bg-primary/10 px-3 py-1 text-sm font-medium text-primary">
+                Estamos para Servirte
               </div>
-              <div>
-                <h4 className="font-medium text-primary text-base sm:text-lg">Teléfono</h4> {/* Adjusted font size */}
-                <p className="text-gray-700 text-sm sm:text-base">+505 8765 4321</p> {/* Adjusted font size */}
-              </div>
+              {/* Adjusted font sizes for responsiveness */}
+              <h2 className="font-serif text-3xl sm:text-4xl font-bold tracking-tight text-primary md:text-5xl">Contáctanos</h2>
+              <p className="mt-3 sm:mt-4 text-base sm:text-lg text-gray-700"> {/* Adjusted margin-top and font size */}
+                Estamos interesados en escuchar tus inquietudes y establecer relaciones comerciales duraderas.
+              </p>
+              <div className="mt-3 sm:mt-4 h-1 w-20 bg-gradient-to-r from-primary/60 to-primary mx-auto rounded-full"></div> {/* Adjusted margin-top */}
             </div>
 
-            <div className="flex items-start gap-3 sm:gap-4">
-              <div className="flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="18" // Adjusted SVG size
-                  height="18" // Adjusted SVG size
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <rect width="20" height="16" x="2" y="4" rx="2" />
-                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-                </svg>
+            <div className="grid gap-8 sm:gap-10 md:gap-12 md:grid-cols-2"> {/* Adjusted gap between columns */}
+              {/* Increased padding for smaller screens */}
+              <div className="rounded-2xl bg-white p-6 sm:p-8 md:p-8 shadow-xl">
+                <h3 className="mb-4 sm:mb-6 text-xl sm:text-2xl font-bold text-primary">Envíanos un mensaje</h3> {/* Adjusted font sizes */}
+                <ContactForm />
               </div>
-              <div>
-                <h4 className="font-medium text-primary text-base sm:text-lg">Correo Electrónico</h4>
-                <p className="text-gray-700 text-sm sm:text-base">mujeresdelnorte.rl@gmail.com</p>
-              </div>
-            </div>
 
-            <div className="flex items-start gap-3 sm:gap-4">
-              <div className="flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="18" // Adjusted SVG size
-                  height="18" // Adjusted SVG size
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
-                  <circle cx="12" cy="10" r="3" />
-                </svg>
-              </div>
-              <div>
-                <h4 className="font-medium text-primary text-base sm:text-lg">Ubicación</h4>
-                <p className="text-gray-700 text-sm sm:text-base">Pueblo Nuevo, Esteli, Nicaragua</p>
-                <p className="text-gray-700 text-sm sm:text-base">Región Norte, Centroamérica</p>
+              <div className="flex flex-col justify-center">
+                {/* Increased padding for smaller screens */}
+                <div className="mb-6 sm:mb-8 rounded-2xl bg-primary/5 p-6 sm:p-8">
+                  <h3 className="mb-4 sm:mb-6 text-xl sm:text-2xl font-bold text-primary">Información de Contacto</h3> {/* Adjusted font sizes */}
+                  <div className="space-y-4 sm:space-y-6"> {/* Adjusted space between items */}
+                    {/* These items already use flexbox and gap, which is good for responsiveness */}
+                    <div className="flex items-start gap-3 sm:gap-4">
+                      <div className="flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-primary/10 text-primary"> {/* Adjusted icon container size */}
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18" // Adjusted SVG size for smaller screens
+                          height="18" // Adjusted SVG size for smaller screens
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        >
+                          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                        </svg>
+                      </div>
+                      <div>
+                        <h4 className="font-medium text-primary text-base sm:text-lg">Teléfono</h4> {/* Adjusted font size */}
+                        <p className="text-gray-700 text-sm sm:text-base">+505 8765 4321</p> {/* Adjusted font size */}
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3 sm:gap-4">
+                      <div className="flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18" // Adjusted SVG size
+                          height="18" // Adjusted SVG size
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        >
+                          <rect width="20" height="16" x="2" y="4" rx="2" />
+                          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                        </svg>
+                      </div>
+                      <div>
+                        <h4 className="font-medium text-primary text-base sm:text-lg">Correo Electrónico</h4>
+                        <p className="text-gray-700 text-sm sm:text-base">mujeresdelnorte.rl@gmail.com</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3 sm:gap-4">
+                      <div className="flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18" // Adjusted SVG size
+                          height="18" // Adjusted SVG size
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        >
+                          <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                          <circle cx="12" cy="10" r="3" />
+                        </svg>
+                      </div>
+                      <div>
+                        <h4 className="font-medium text-primary text-base sm:text-lg">Ubicación</h4>
+                        <p className="text-gray-700 text-sm sm:text-base">Pueblo Nuevo, Esteli, Nicaragua</p>
+                        <p className="text-gray-700 text-sm sm:text-base">Región Norte, Centroamérica</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Increased padding for smaller screens */}
+                <div className="rounded-2xl bg-gradient-to-r from-primary to-amber-700 p-6 sm:p-8 text-white">
+                  <h3 className="mb-3 sm:mb-4 text-lg sm:text-xl font-bold">Horario de Atención</h3>
+                  <div className="space-y-1 sm:space-y-2">
+                    <div className="flex justify-between text-sm sm:text-base">
+                      <span>Lunes - Viernes:</span>
+                      <span>8:00 AM - 5:00 PM</span>
+                    </div>
+                    <div className="flex justify-between text-sm sm:text-base">
+                      <span>Sábado:</span>
+                      <span>8:00 AM - 12:00 PM</span>
+                    </div>
+                    <div className="flex justify-between text-sm sm:text-base">
+                      <span>Domingo:</span>
+                      <span>Cerrado</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Increased padding for smaller screens */}
-        <div className="rounded-2xl bg-gradient-to-r from-primary to-amber-700 p-6 sm:p-8 text-white"> 
-          <h3 className="mb-3 sm:mb-4 text-lg sm:text-xl font-bold">Horario de Atención</h3> {/* Adjusted font sizes */}
-          <div className="space-y-1 sm:space-y-2"> {/* Adjusted space between items */}
-            <div className="flex justify-between text-sm sm:text-base"> {/* Adjusted font size */}
-              <span>Lunes - Viernes:</span>
-              <span>8:00 AM - 5:00 PM</span>
-            </div>
-            <div className="flex justify-between text-sm sm:text-base"> {/* Adjusted font size */}
-              <span>Sábado:</span>
-              <span>8:00 AM - 12:00 PM</span>
-            </div>
-            <div className="flex justify-between text-sm sm:text-base"> {/* Adjusted font size */}
-              <span>Domingo:</span>
-              <span>Cerrado</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+        </section>
 
         {/* Map Section */}
         <section className="h-[400px] bg-gray-200">
@@ -618,28 +618,25 @@ export default function Home() {
                 empoderamiento femenino.
               </p>
               <div className="flex gap-4">
-                {/* Instagram */}
+                {/* Facebook */}
                 <a
-                  href="#"
+                  href="https://www.facebook.com/share/1Ak9MmyUKZ/ "
                   className="group flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition-colors hover:bg-white/20"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
                     height="20"
                     viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
+                    fill="currentColor"
+                    stroke="none"
                     className="transition-transform group-hover:scale-110"
                   >
-                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
                   </svg>
-                  <span className="sr-only">Instagram</span>
+                  <span className="sr-only">Facebook</span>
                 </a>
 
                 {/* TikTok */}
@@ -697,6 +694,9 @@ export default function Home() {
                 </Link>
                 <Link href="#productos" className="text-white/80 hover:text-white transition-colors">
                   Flor de Jamaica
+                </Link>
+                <Link href="#productos" className="text-white/80 hover:text-white transition-colors">
+                  Granos Básicos
                 </Link>
               </nav>
             </div>
